@@ -1,0 +1,6 @@
+[submodule "hoedown"]
+	path = hoedown
+	url = git@github.com:hoedown/hoedown.git
+[submodule "hoedown-sample"]
+	path = hoedown-sample
+	url = git@github.com:creationix/hoedown-sample.git

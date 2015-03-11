@@ -1,0 +1,68 @@
+<meta charset="utf8">
+
+<h1>The largest heading (an &lt;h1&gt; tag)</h1>
+
+<h2>The second largest heading (an &lt;h2&gt; tag)</h2>
+
+<p>…</p>
+
+<h6>The 6th largest heading (an &lt;h6&gt; tag)</h6>
+
+<p>In the words of Abraham Lincoln:</p>
+
+<blockquote>
+<p>Pardon my french</p>
+</blockquote>
+
+<p><em>This text will be italic</em></p>
+
+<p><strong>This text will be bold</strong></p>
+
+<p><strong>Everyone <u>must</u> attend the meeting at 5 o&#39;clock today.</strong></p>
+
+<pre><code class="language-lua">local ffi = require(&#39;ffi&#39;)
+local hd = require(&#39;hoedown&#39;)
+local bundle = require(&#39;luvi&#39;).bundle
+
+local flags = hd.HOEDOWN_HTML_ESCAPE
+local renderer = hd.hoedown_html_renderer_new(flags, 0)
+
+local extensions = bit.bor(
+  hd.HOEDOWN_EXT_BLOCK,
+  hd.HOEDOWN_EXT_SPAN
+)
+
+local document = hd.hoedown_document_new(renderer, extensions, 16);
+
+local html = hd.hoedown_buffer_new(16)
+
+local markdown = bundle.readfile(&quot;sample.md&quot;)
+
+hd.hoedown_document_render(document, html, markdown, #markdown);
+
+local string = ffi.string(html.data, html.size)
+</code></pre>
+
+<p>\[
+\begin{align*}
+  &amp; \phi(x,y) = \phi \left(\sum_{i=1}^n x_ie_i, \sum_{j=1}^n y_je_j \right)
+  = \sum_{i=1}^n \sum_{j=1}^n x_i y_j \phi(e_i, e_j) = \\
+  &amp; (x_1, \ldots, x_n) \left( \begin{array}{ccc}
+      \phi(e_1, e_1) &amp; \cdots &amp; \phi(e_1, e_n) \\
+      \vdots &amp; \ddots &amp; \vdots \\
+      \phi(e_n, e_1) &amp; \cdots &amp; \phi(e_n, e_n)
+    \end{array} \right)
+  \left( \begin{array}{c}
+      y_1 \\
+      \vdots \\
+      y_n
+    \end{array} \right)
+\end{align*}
+\]</p>
+
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/tomorrow-night-bright.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/languages/lua.min.js"></script>
+<script>hljs.initHighlightingOnLoad()</script>
+
