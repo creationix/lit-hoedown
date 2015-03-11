@@ -1,4 +1,9 @@
 <meta charset="utf8">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/tomorrow-night-bright.min.css">
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/languages/lua.min.js"></script>
+<script>hljs.initHighlightingOnLoad()</script>
 
 <h1>The largest heading (an &lt;h1&gt; tag)</h1>
 
@@ -46,23 +51,41 @@ local string = ffi.string(html.data, html.size)
 <p>\[
 \begin{align*}
   &amp; \phi(x,y) = \phi \left(\sum_{i=1}^n x_ie_i, \sum_{j=1}^n y_je_j \right)
-  = \sum_{i=1}^n \sum_{j=1}^n x_i y_j \phi(e_i, e_j) = \\
+  = \sum_{i=1}^n \sum_{j=1}^n x_i y_j \phi(e_i, e_j) = \
   &amp; (x_1, \ldots, x_n) \left( \begin{array}{ccc}
-      \phi(e_1, e_1) &amp; \cdots &amp; \phi(e_1, e_n) \\
-      \vdots &amp; \ddots &amp; \vdots \\
+      \phi(e_1, e_1) &amp; \cdots &amp; \phi(e_1, e_n) \
+      \vdots &amp; \ddots &amp; \vdots \
       \phi(e_n, e_1) &amp; \cdots &amp; \phi(e_n, e_n)
     \end{array} \right)
   \left( \begin{array}{c}
-      y_1 \\
-      \vdots \\
+      y_1 \
+      \vdots \
       y_n
     \end{array} \right)
 \end{align*}
 \]</p>
 
-<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/tomorrow-night-bright.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/languages/lua.min.js"></script>
-<script>hljs.initHighlightingOnLoad()</script>
+<p>Does it work with <q>smart quotes?</q></p>
+
+<p>Isn&rsquo;t it nice?</p>
+
+<table>
+<thead>
+<tr>
+<th>First Header</th>
+<th>Second Header</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Content Cell</td>
+<td>Content Cell</td>
+</tr>
+<tr>
+<td>Content Cell</td>
+<td>Content Cell</td>
+</tr>
+</tbody>
+</table>
 
