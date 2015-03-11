@@ -1,6 +1,6 @@
 return {
   name = "creationix/hoedown",
-  version = "1.0.1",
+  version = "1.0.2",
   homepage = "https://github.com/creationix/lit-hoedown",
   files = {
     "*.lua",
