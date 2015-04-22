@@ -28,7 +28,7 @@ hoedown-sample/deps: hoedown-sample/main.lua
 	ln -s ../.. hoedown-sample/deps/hoedown
 
 test: libs hoedown-sample/deps
-	LUVI_APP=hoedown-sample lit
+	luvi hoedown-sample
 
 clean:
 	rm -rf build hoedown-sample/deps

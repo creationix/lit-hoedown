@@ -1,9 +1,9 @@
 return {
   name = "creationix/hoedown",
-  version = "1.0.5",
+  version = "1.0.7",
   homepage = "https://github.com/creationix/lit-hoedown",
-  deps = {
-    "creationix/ffi-loader@1.0.0"
+  dependencies = {
+    "creationix/ffi-loader@1.0.2"
   },
   files = {
     "*.lua",
