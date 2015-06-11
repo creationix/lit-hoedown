@@ -10,6 +10,5 @@ ffi.cdef(module:load("hoedown.h"))
 
 local arch = ffi.os .. "-" .. ffi.arch
 return module:action(arch .. "/" .. assert(names[arch], "Unsupported architecture"), function (path)
-    p(path)
   return ffi.load(path)
 end)
