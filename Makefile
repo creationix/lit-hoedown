@@ -17,7 +17,7 @@ hoedown/src:
 	git submodule update --init hoedown
 
 build: hoedown/src
-	cmake -Bbuild -H. -GNinja
+	cmake -Bbuild -H. 
 
 hoedown-sample/main.lua:
 	git submodule update --init hoedown-sample
