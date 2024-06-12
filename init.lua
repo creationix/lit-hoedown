@@ -1,6 +1,7 @@
 local names = {
   ["Linux-arm"] = "libhoedown.so",
   ["Linux-x64"] = "libhoedown.so",
+  ["Linux-arm64"] = "libhoedown.so",
   ["OSX-x64"] = "libhoedown.dylib",
   ["OSX-arm64"] = "libhoedown.dylib",
   ["Windows-x64"] = "hoedown.dll",
